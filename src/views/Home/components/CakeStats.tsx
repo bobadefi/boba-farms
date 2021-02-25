@@ -26,15 +26,15 @@ const CakeStats = () => {
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
-  const farms = useFarms();
-  const bobaPrice = usePriceCakeBusd();
-  const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0);
-  const cakeSupply = getBalanceNumber(circSupply);
-  const marketCap = bobaPrice.times(circSupply);
+  const farms = useFarms()
+  const bobaPrice = usePriceCakeBusd()
+  const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0)
+  const cakeSupply = getBalanceNumber(circSupply)
+  const marketCap = bobaPrice.times(circSupply)
 
-  let bobaPerBlock = 0;
-  if(farms && farms[0] && farms[0].bobaPerBlock){
-    bobaPerBlock = new BigNumber(farms[0].bobaPerBlock).div(new BigNumber(10).pow(18)).toNumber();
+  let bobaPerBlock = 0
+  if (farms && farms[0] && farms[0].bobaPerBlock) {
+    bobaPerBlock = new BigNumber(farms[0].bobaPerBlock).div(new BigNumber(10).pow(18)).toNumber()
   }
 
   return (
@@ -57,7 +57,9 @@ const CakeStats = () => {
         </Row>
         <Row>
           <Text fontSize="14px">{TranslateString(540, 'New BOBA/block')}</Text>
-          <Text bold fontSize="14px">{bobaPerBlock}</Text>
+          <Text bold fontSize="14px">
+            {bobaPerBlock}
+          </Text>
         </Row>
       </CardBody>
     </StyledCakeStats>
