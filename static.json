@@ -1,3 +1,7 @@
 {
-  "root": "build/"
+  "root": "build/",
+  "routes": {
+    "/farms/*": "index.html",
+    "/cups/*": "index.html"
+  }
 }
