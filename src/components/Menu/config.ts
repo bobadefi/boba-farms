@@ -13,11 +13,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://swap.bobafi.com/swap',
+        href: 'https://swap.bobadefi.com/#/swap',
       },
       {
         label: 'Liquidity',
-        href: 'https://swap.bobafi.com/pool',
+        href: 'https://swap.bobadefi.com/#/pool',
       },
     ],
   },
